@@ -65,31 +65,31 @@ function runEnter() {
 
 
 //Filter the table data according to input value entered 
-var filteredData = ufoData  
+var filteredData = ufoData; 
 if (inputDateValue){
   filteredData = filteredData.filter(items => items.datetime === inputDateValue);
-  }
+  };
   console.log(filteredData);
 
 if (inputCityValue){
     filteredData = filteredData.filter(items => items.city === inputCityValue);
-    }
+    };
 
 if (inputStateValue){
       filteredData = filteredData.filter(items => items.state === inputStateValue);
-      }
+      };
       
 if (inputCountryValue){
         filteredData = filteredData.filter(items => items.country === inputCountryValue);
-        }
+        };
         
 if (inputShapeValue){
           filteredData = filteredData.filter(items => items.shape === inputShapeValue);
-          }        
+          };       
 
 
-    console.log(filteredData); 
-  tbody.html(' ')
+  console.log(filteredData); 
+  tbody.html(' ');
   filteredData.forEach((ufoReport) => {
     var row = tbody.append("tr");
     Object.entries(ufoReport).forEach(([key, value]) => {
@@ -97,7 +97,7 @@ if (inputShapeValue){
       cell.text(value);
     });
   });
-}
+};
 
 
 
